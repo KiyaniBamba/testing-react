@@ -1,68 +1,62 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Testing III
+In this project, you will demonstrate proficiency by writing unit tests for an existing React application. Your tests should verify the behavior listed in the Minimum Viable Product section.
 
-## Available Scripts
+Some of the topics covered were:
 
-In the project directory, you can run:
+Testing a React application.
+Using the react-testing-library testing framework.
+Writing unit tests for React components.
+Instructions
+Read these requirements carefully. Understand exactly what is expected before starting.
 
-### `npm start`
+You are allowed, and encouraged, to collaborate with your peers while working on this assignment. Remember to follow the twenty-minute rule and post questions to your cohort's help channel before seeking support from your PM and Instructor.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Commits
+Please push your code often and use descriptive commit messages, this helps you and your project manager.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Project Description
+In this project, you will write unit tests for an existing React application that controls a gate and shows two LEDs that portrait the status of the gate.
 
-### `npm test`
+The requirements are listed under the Minimum Viable Product section below.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Project Set Up
+Follow these steps to setup your git fork and branch.
 
-### `npm run build`
+ Fork this repository.
+ Use GitHub's website to add your project manager as collaborator on your fork.
+ Clone your forked version of the repository (Not Lambda's!).
+ Create a new branch: git checkout -b <firstName-lastName>.
+ Commit changes to your <firstName-lastName> branch.
+ Push often to your branch: git push origin <firstName-lastName>.
+Follow these steps for completing your project.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ Submit a Pull-Request to merge the <firstName-lastName> branch into the master branch on your fork. Please don't merge your own pull request
+ Use GitHub's website to add your project manager as a reviewer on the pull-request.
+ Your project manager will count the project as complete by merging the branch back into the master branch of your forked repository.
+Minimum Viable Product
+After a set of interviews with the potential users of the solution, we gathered the following information about the desired functionality. Not all the information provided by our clients is relevant to the design of the solution, but it's included to help understand the requirements.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Your job is to write unit tests to ensure that the application behaves as expected.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The expected/assumed behavior of the application is listed below.
 
-### `npm run eject`
+Gate
+defaults to unlocked and open
+cannot be closed or opened if it is locked
+Dashboard
+shows the controls and display
+Display Component
+displays if gate is open/closed and if it is locked/unlocked
+displays 'Closed' if the closed prop is true and 'Open' if otherwise
+displays 'Locked' if the locked prop is true and 'Unlocked' if otherwise
+when locked or closed use the red-led class
+when unlocked or open use the green-led class
+Controls Component
+provide buttons to toggle the closed and locked states.
+buttons' text changes to reflect the state the door will be in if clicked
+the closed toggle button is disabled if the gate is locked
+the locked toggle button is disabled if the gate is open
+Stretch Problem
+This section is optional and not counted towards MVP. Start working on it after you're done with the main assignment.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+add Redux and read this example in the docs to learn how to write tests for it.
